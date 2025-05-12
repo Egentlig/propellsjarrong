@@ -43,14 +43,10 @@
       const tableBody = document.querySelector("#table-body");
       words.forEach(word => {
         const row = document.createElement("tr");
-        const rowId = document.createElement("th");
-        rowId.setAttribute("scope", "row");
-        rowId.innerText = word.id;
         const dataWord = document.createElement("td");
-        dataWord.innerText = word.ord;
+        dataWord.innerText = word.word;
         const dataExplanation = document.createElement("td");
         dataExplanation.innerText = word.explanation;
-        row.appendChild(rowId);
         row.appendChild(dataWord);
         row.appendChild(dataExplanation);
         tableBody.appendChild(row);
