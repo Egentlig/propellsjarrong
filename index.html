@@ -46,7 +46,10 @@
         const dataWord = document.createElement("td");
         dataWord.innerText = word.word;
         const dataExplanation = document.createElement("td");
-        dataExplanation.innerText = word.explanation;
+        dataExplanation.innerHTML = word.explanation.replace(
+          /(https?:\/\/)([^ ]+)/g,
+          '<a target="_blank" href="$&">$2</a>'
+        );
         row.appendChild(dataWord);
         row.appendChild(dataExplanation);
         tableBody.appendChild(row);
