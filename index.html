@@ -37,7 +37,7 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript">
     async function populateWords() {
-      const response = await fetch("https://api.opplegget.no/twitch/user/ordbok/v1/ord");
+      const response = await fetch("https://api.teknisk.team/twitch/user/ordbok/v1/ord");
       const words = await response.json();
 
       const tableBody = document.querySelector("#table-body");
