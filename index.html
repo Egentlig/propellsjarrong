@@ -37,7 +37,7 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript">
     async function populateWords() {
-      const response = await fetch("https://api.j4d.dev/spinner-rewrite/note/propellsjarrong");
+      const response = await fetch("https://api.j4d.dev/spinner/note/propellsjarrong");
       const words = await response.json();
 
       const tableBody = document.querySelector("#table-body");
